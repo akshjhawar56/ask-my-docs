@@ -1,1 +1,10 @@
+from pypdf import PdfReader
 print('setup done')
+r= PdfReader(r"C:\Users\akshj\Downloads\Greenfield_Student_Handbook_2026-27.pdf")
+print(len(r.pages))
+text = r.pages[0].extract_text()
+text2 = r.pages[4].extract_text()
+text3 = r.pages[9].extract_text()
+print(text)
+print(text2)
+print(text3)
